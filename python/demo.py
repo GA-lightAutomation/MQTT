@@ -39,7 +39,7 @@ def on_message(client, userdata, message):
     print("message retain flag=",message.retain)
     client.publish("inTopic","ON")
 
-broker_address="127.0.0.1"
+broker_address="192.168.100.12"
 print("creating new instance")
 client = mqtt.Client("pypi") #create new instance
 client.on_message=on_message #attach function to callback
